@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/dz.css">
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap.min.css">
+    <script src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+    <script src="jQueryDownload/jquery-3.1.1.min.js"></script>
+    <link rel="stylesheet" href="css/buttons.css">
+    <link rel="stylesheet" href="uikit-2.25.0/css/uikit.gradient.min.css">
+    <script src="uikit-2.25.0/js/uikit.min.js"></script>
+    <script type="text/javascript" language="javascript" >
+        var duan=0;
+        $(document).ready(function(){
+            const a = $(window).width();
+            const b=a/2+480;
+            const c=a-(a/2+480+150);
+            if(c>=300){
+                $("#fudong").css({"background-color":"yellow","font-size":"200%","border":"1px","width":"150px","height":"150px","position":"absolute","top":"25%","left":b});
+            }
+            if(c<300){
+                $("#fudong").css({"background-color":"yellow","font-size":"200%","border":"1px","width":"150px","height":"150px","position":"absolute","top":"25%","right":"0px"});
+            }
+            var kj=document.getElementById("kuaijie");
+            kj.onmouseover=function () {
+                document.getElementById("xian").style.display="block";
+                document.getElementById("xian").style.marginTop="40px";
+            }
+            kj.onmouseout=function () {
+                document.getElementById("xian").style.display="none";
+            }
+        })
+
+        var cang=function () {
+            if(duan==0){
+                document.getElementById("demo").style.display="none";
+                duan=1;
+            }else {
+                document.getElementById("demo").style.display="table-cell";
+                duan=0;
+            }
+        }
+    </script>
+</head>
+<body>
+<div id="zhu">
+    <div>
+        <img src="http://www.discuz.net/data/attachment/common/cf/121404rvgpvwdj2pwu1gmp.jpg" id="tp">
+    </div>
+    <div class="table">
+        <div class="table-tr">
+            <div class="table-td">
+                <a href="#" class="btn btn-primary"><i class="fa fa-id-card fa-3x"></i>discuz社区动力</a>
+            </div>
+            <div class="table-td">
+                <div><a href="#" class="btn btn-primary"><i class="fa fa-weixin fa-3x"></i>微信</a></div>
+                <div>扫一扫，访问微社区</div>
+            </div>
+            <div class="shuxian"></div>
+            <div class="table-td">
+                <div><a href="#" class="btn btn-primary"><i class="fa fa-qq fa-3x"></i>QQ</a></div>
+                <div>只需一步，快速开始</div>
+            </div>
+            <div class="shuxian"></div>
+            <div class="table-td-left">
+                <div class="table">
+                    <div class="table-tr">
+                        <div class="table-td">
+                            <select>
+                                <option>用户名</option>
+                                <option>Email</option>
+                            </select>
+                        </div>
+                        <div class="table-td-left">
+                            <input type="text"><input type="checkbox">自动登录
+                        </div>
+                    </div>
+                    <div class="table-tr">
+                        <div class="table-td">
+                            <select>
+                                <option>密码</option>
+                            </select>
+                        </div>
+                        <div class="table-td-left">
+                            <input type="password"><input type="button" value="登录">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="shuxian"></div>
+            <div class="table-td">
+                <div><a href="#">找回密码</a></div>
+                <div><a href="#">立即注册</a></div>
+            </div>
+        </div>
+    </div>
+    <div>
+        <nav class="uk-navbar">
+            <ul class="uk-navbar-nav">
+                <li class="uk-active"><a href="">论坛首页</a></li>
+                <li class="uk-parent" data-uk-dropdown="">
+                    <a href="">文档资料</a>
+                    <div class="uk-dropdown uk-dropdown-navbar uk-dropdown-bottom">
+                        <ul class="uk-nav uk-nav-navbar">
+                            <li><a href="#">教程</a></li>
+                            <li class="uk-nav-divider"></li>
+                            <li><a href="#">开发文档</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="uk-parent"><a href="">腾讯云主机</a></li>
+                <li class="uk-parent"><a href="">Discuz! 实验室</a></li>
+                <li class="uk-parent"><a href="">服务购买</a></li>
+                <li class="uk-parent" data-uk-dropdown="">
+                    <a href="">应用中心</a>
+                    <div class="uk-dropdown uk-dropdown-navbar uk-dropdown-bottom">
+                        <ul class="uk-nav uk-nav-navbar">
+                            <li><a href="#">Discuz!应用中心</a></li>
+                            <li class="uk-nav-divider"></li>
+                            <li><a href="#">Discuz!开放平台</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="uk-parent" data-uk-dropdown="">
+                    <a href="">微社区</a>
+                    <div class="uk-dropdown uk-dropdown-navbar uk-dropdown-bottom">
+                        <ul class="uk-nav uk-nav-navbar">
+                            <li><a href="#">Discuz!打通版</a></li>
+                            <li class="uk-nav-divider"></li>
+                            <li><a href="#">标准版</a></li>
+                            <li class="uk-nav-divider"></li>
+                            <li><a href="#">本地化部署版(第三方)</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="uk-parent"><a href="">在线体验</a></li>
+            </ul>
+            <div class="uk-navbar-flip" id="kuaijie">
+                <ul class="uk-navbar-nav">
+                    <li class="uk-parent">
+                        <select style="height: 24px;width: 113px;padding:2px;margin:8px 8px;" >
+                            <option>快捷导航</option>
+                        </select>
+                    </li>
+                </ul>
+                <div style="text-align: center;background-color: aqua;width: 200px;height: 150px;display: none;position: absolute" id="xian">
+                    请 登录 后使用快捷导航
+                    没有帐号？立即注册
+                </div>
+            </div>
+        </nav>
+    </div>
+    <div class="table">
+        <div class="table-tr">
+            <div class="table-td">
+                <input class="text-center" type="text" placeholder="请输入搜索内容">
+                <select style="height: 24px;width: 80px;padding:2px;margin:8px 8px;">
+                    <option>帖子</option>
+                    <option>用户</option>
+                </select>
+                <button class="button button-primary button-circle button-small"><i class="fa fa-plus"></i></button>
+            </div>
+            <div class="table-td">
+                <label>热搜：</label>
+                <a href="#">网页游戏</a>
+                <a href="#">婚纱</a>
+                <a href="#">推广</a>
+                <a href="#">聊天室</a>
+                <a href="#">游戏</a>
+                <a href="#">婚纱摄影</a>
+                <a href="#">积分商城</a>
+                <a href="#">搬家</a>
+                <a href="#">同城交友</a>
+                <a href="#">客户端</a>
+                <a href="#">旅游招聘</a>
+            </div>
+        </div>
+    </div>
+    <div class="table">
+        <div class="table-tr">
+            <div class="table-td-left">
+                <i class="fa fa-home fa-1x"></i>
+                <i class="fa fa-angle-right fa-1x">论坛首页</i>
+            </div>
+        </div>
+        <div class="table-tr">
+            <div class="table-td-left">
+                <i class="fa fa-bar-chart fa-1x"></i>
+                <label>今日：9|</label>
+                <label>昨日：9|</label>
+                <label>帖子：9|</label>
+                <label>会员：9|</label>
+                <label>欢迎新会员：<a href="#">沙金</a></label>
+            </div>
+            <div class="table-td-right">
+                <a href="#">最新回复</a>
+            </div>
+        </div>
+    </div>
+    <div class="table">
+        <div class="table-tr">
+            <div class="table-td-xian">
+                <a href="#">Comsenz 公司动态</a>
+                <i class="fa fa-chevron-down fa-3x" style="float: right;padding-right: 2px" onclick="cang()"></i>
+            </div>
+        </div>
+        <div class="table-tr" id="cc">
+            <div class="table-td-xian-bai " id="demo">
+                <div>
+                    <i class="fa fa-circle-o-notch  fa-3x"></i>
+                    <a href="#">Discuz! 程序发布</a>
+                    <br>
+                    <label style="padding-left: 45px">主题: 80, 帖数: 2651</label>
+                    <br>
+                    <label style="padding-left: 45px">关于 X3.3 的补充说明 2017-1-22 16:23 monkeye</label>
+                </div>
+                <div>
+                    <i class="fa fa-circle-o-notch  fa-3x"></i>
+                    <a href="#">Discuz! 程序发布</a>
+                    <br>
+                    <label style="padding-left: 45px">主题: 80, 帖数: 2651</label>
+                    <br>
+                    <label style="padding-left: 45px">关于 X3.3 的补充说明 2017-1-22 16:23 monkeye</label>
+                </div>
+            </div>
+        </div>
+        <div class="table-tr">
+            <div class="table-td-xian">
+                <a href="#">Discuz! 交流与讨论</a>
+                <i class="fa fa-chevron-down fa-1x" style="float: right;padding-right: 2px"></i>
+            </div>
+        </div>
+        <div class="table-tr">
+            <div class="table-td-xian-bai">
+                <div>
+                    <i class="fa fa-circle-o-notch fa-spin fa-3x"></i>
+                    <a href="#">Discuz!-模板</a>
+                    <br>
+                    <label style="padding-left: 45px">主题: 80, 帖数: 2651</label>
+                    <br>
+                    <label style="padding-left: 45px">关于 X3.3 的补充说明 2017-1-22 16:23 monkeye</label>
+                </div>
+                <div>
+                    <i class="fa fa-circle-o-notch  fa-3x"></i>
+                    <a href="#">Discuz!-插件</a>
+                    <br>
+                    <label style="padding-left: 45px">主题: 80, 帖数: 2651</label>
+                    <br>
+                    <label style="padding-left: 45px">关于 X3.3 的补充说明 2017-1-22 16:23 monkeye</label>
+                </div>
+            </div>
+        </div>
+        <div class="table-tr">
+            <div class="table-td-xian-bai">
+                <div>
+                    <i class="fa fa-circle-o-notch  fa-3x"></i>
+                    <a href="#">Discuz!-应用中心 (3)</a>
+                    <br>
+                    <label style="padding-left: 45px">主题: 80, 帖数: 2651</label>
+                    <br>
+                    <label style="padding-left: 45px">关于 X3.3 的补充说明 2017-1-22 16:23 monkeye</label>
+                </div>
+                <div>
+                    <i class="fa fa-circle-o-notch  fa-3x"></i>
+                    <a href="#">Discuz!-安装使用 (18)</a>
+                    <br>
+                    <label style="padding-left: 45px">主题: 80, 帖数: 2651</label>
+                    <br>
+                    <label style="padding-left: 45px">关于 X3.3 的补充说明 2017-1-22 16:23 monkeye</label>
+                </div>
+            </div>
+        </div>
+        <div class="table-tr">
+            <div class="table-td-xian-bai">
+                <div>
+                    <i class="fa fa-circle-o-notch  fa-3x"></i>
+                    <a href="#">站长帮 (4)</a>
+                    <br>
+                    <label style="padding-left: 45px">主题: 80, 帖数: 2651</label>
+                    <br>
+                    <label style="padding-left: 45px">关于 X3.3 的补充说明 2017-1-22 16:23 monkeye</label>
+                </div>
+                <div>
+                    <i class="fa fa-circle-o-notch  fa-3x"></i>
+                    <a href="#">Discuz!-BUG反馈</a>
+                    <br>
+                    <label style="padding-left: 45px">主题: 80, 帖数: 2651</label>
+                    <br>
+                    <label style="padding-left: 45px">关于 X3.3 的补充说明 2017-1-22 16:23 monkeye</label>
+                </div>
+            </div>
+        </div>
+        <div class="table-tr">
+            <div class="table-td-xian">
+                <a href="#">关联技术专区</a>
+                <i class="fa fa-chevron-down fa-1x" style="float: right;padding-right: 2px"></i>
+            </div>
+        </div>
+        <div class="table-tr">
+            <div class="table-td-xian-bai">
+                <div style="float: left">
+                    <i class="fa fa-circle-o-notch  fa-3x"></i>
+                    <a href="#">站长帮 (4)</a>
+                    <i class="fa fa-circle-o-notch  fa-3x"></i>
+                    <a href="#">站长帮 (4)</a>
+                    <i class="fa fa-circle-o-notch  fa-3x"></i>
+                    <a href="#">站长帮 (4)</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="fudong" >二维码</div>
+</body>
+</html>
